@@ -12,7 +12,7 @@ export let Arithmetic = (function () {
    * @param floatNum {number} 小数
    * @return {object}
    *   {times:100, num: 314}
-   */
+   */ 
   function toInteger (floatNum) {
     var ret = { times: 1, num: 0 }
     if (isInteger(floatNum)) {
