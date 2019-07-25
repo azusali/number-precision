@@ -107,6 +107,14 @@ function round(num: number, ratio: number): number {
   return divide(Math.round(times(num, base)), base);
 }
 
+/**
+ * 格式化显示
+ * 123456789.999显示为123,456,789.999
+ */
+function formatNumber (num: number): number {
+  return +(num.toString().replace(/(\d)(?=(\d{3})+\.)/g, '$1,'))
+}
+
 let _boundaryCheckingState = true;
 /**
  * 是否进行边界检查，默认开启
@@ -115,5 +123,5 @@ let _boundaryCheckingState = true;
 function enableBoundaryChecking(flag = true) {
   _boundaryCheckingState = flag;
 }
-export { strip, plus, minus, times, divide, round, digitLength, float2Fixed, enableBoundaryChecking };
-export default { strip, plus, minus, times, divide, round, digitLength, float2Fixed, enableBoundaryChecking };
+export { strip, plus, minus, times, divide, round, digitLength, float2Fixed, enableBoundaryChecking, formatNumber };
+export default { strip, plus, minus, times, divide, round, digitLength, float2Fixed, enableBoundaryChecking, formatNumber };
