@@ -6,7 +6,7 @@ export let Arithmetic = (function () {
   function isInteger (obj) {
     return Math.floor(obj) === obj
   }
-
+// console.log(test)
   /*
    * 将一个浮点数转成整数，返回整数和倍数。如 3.14 >> 314，倍数是 100
    * @param floatNum {number} 小数
