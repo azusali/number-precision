@@ -31,9 +31,6 @@
       "build-test/**/*.test.js"
     ]
   },
-  "pre-commit": [
-    "tslint"
-  ],
   "devDependencies": {
     "ava": "^0.24.0",
     "codecov": "^3.1.0",

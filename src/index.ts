@@ -108,6 +108,30 @@ function round(num: number, ratio: number): number {
 }
 
 /**
+ * 向上取整
+ *
+ * @param {number} num
+ * @param {number} [percision=2]
+ * @returns {number}
+ */
+function ceil (num: number, percision = 2): number {
+  const base = Math.pow(10, percision)
+  return divide(Math.ceil(multiply(num, base)), base)
+}
+
+/**
+ * 向下取整
+ *
+ * @param {number} num
+ * @param {number} [percision=2]
+ * @returns {number}
+ */
+function floor (num: number, percision = 2): number {
+  const base = Math.pow(10, percision)
+  return divide(Math.floor(multiply(num, base)), base)
+}
+
+/**
  * 格式化显示
  * 123456789.999显示为123,456,789.999
  */
@@ -123,5 +147,5 @@ let _boundaryCheckingState = true;
 function enableBoundaryChecking(flag = true) {
   _boundaryCheckingState = flag;
 }
-export { strip, plus, minus, times, divide, round, digitLength, float2Fixed, enableBoundaryChecking, formatNumber };
-export default { strip, plus, minus, times, divide, round, digitLength, float2Fixed, enableBoundaryChecking, formatNumber };
+export { strip, plus, minus, times, divide, round, ceil, floor, digitLength, float2Fixed, enableBoundaryChecking, formatNumber };
+export default { strip, plus, minus, times, divide, round, ceil, floor, digitLength, float2Fixed, enableBoundaryChecking, formatNumber };

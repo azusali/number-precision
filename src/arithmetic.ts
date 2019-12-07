@@ -52,7 +52,7 @@ function operation (firstNum: number, secondNum: number, type: string): number {
 
   let maxTimes = times1 > times2 ? times1 : times2
 
-  let result = null
+  let result = 0
 
   switch (type) {
     case 'add':
@@ -84,7 +84,7 @@ function operation (firstNum: number, secondNum: number, type: string): number {
       break
   }
 
-  return ['add', 'subtract'].includes(type) ? (result / maxTimes) : result
+  return type === 'add' || type === 'subtract' ? (result / maxTimes) : result
 }
 
 /**
